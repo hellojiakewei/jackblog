@@ -5,8 +5,15 @@
 </template>
 
 <script>
+import {inject} from 'vue'
 export default {
-    name:"ArticleAdd"
+    name:"ArticleAdd",
+    setup(){
+        console.log(inject('name'))
+        return {
+
+        }
+    }
 }
 </script>
 

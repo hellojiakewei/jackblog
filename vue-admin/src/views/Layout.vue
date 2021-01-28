@@ -20,6 +20,7 @@
 import Header from "../components/Header.vue";
 import Silder from "../components/Silder.vue";
 import Main from "../components/Main.vue";
+import {provide} from 'vue'
 export default {
   name: "Layout",
   components: {
@@ -27,6 +28,9 @@ export default {
     Silder,
     Main,
   },
+  setup(){
+      provide('name','jiakewei')
+  }
 };
 </script>
 <style lang="scss">

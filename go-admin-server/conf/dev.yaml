@@ -1,0 +1,13 @@
+system:
+  port: ':8081'
+
+mysql:
+  path: '47.105.178.253:3306'
+  config: 'charset=utf8mb4&parseTime=True'
+  dbName: 'jiakewei'
+  username: 'root'
+  password: '123456'
+  max-idle-conns: 10
+  max-open-conns: 100
+  log-mode: false
+  log-zap: false

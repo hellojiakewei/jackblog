@@ -5,6 +5,7 @@
     "strict": true,
     "jsx": "preserve",
     "importHelpers": true,
+    "noImplicitAny":true, // 是否禁用any
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "skipLibCheck": true,

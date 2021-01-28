@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Layout from '../views/Layout.vue'
-import ArticleAdd from '../views/Article/ArticleAdd.vue'
 import Login from '../views/Login/Login.vue'
-import CategoryAdd from '../views/Category/CategoryAdd.vue'
+import {useStore} from 'vuex'
+const store = useStore()
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/home',
@@ -30,19 +30,18 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Login',
     component: Login
   },
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  // }
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
+})
+router.beforeEach((to,from,next)=>{
+  // console.log(store.state.userinfo)
+  console.log("to",to)
+  console.log("from",from)
+  console.log("next",next)
+  next()
 })
 
 export default router

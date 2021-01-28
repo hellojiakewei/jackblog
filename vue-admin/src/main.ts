@@ -5,7 +5,7 @@ import store from './store'
 import ElementPlus from 'element-plus';
 import './styles/element-plus.scss'
 createApp(App)
-.use(ElementPlus,{ size: 'small', zIndex: 3000 })
+.use(ElementPlus)
 .use(store)
 .use(router)
 .mount('#app')
